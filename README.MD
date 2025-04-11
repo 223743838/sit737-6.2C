@@ -1,4 +1,4 @@
-# SIT737 - Task 6.1P: Deploying Dockerized Microservice to Kubernetes
+# SIT737 - Task 6.1C: Deploying Dockerized Microservice to Kubernetes
 
 This project demonstrates deploying a simple Node.js-based video streaming microservice using Docker and Kubernetes.
 
