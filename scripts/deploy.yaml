@@ -1,0 +1,41 @@
+#
+# To deploy:
+#
+# kubectl apply -f scripts/deploy.yaml
+#
+#
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: turtle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: turtle
+  template:
+    metadata:
+      labels:
+        app: turtle
+    spec:
+      containers: 
+      - name: turtle
+        image: turtle:1
+        imagePullPolicy: Never
+        env:
+        - name: PORT
+          value: "4000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: turtle
+spec:
+  selector:
+    app: turtle
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4000
+      nodePort: 30000
