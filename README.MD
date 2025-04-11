@@ -45,3 +45,7 @@ A Service of type NodePort exposing port 30000
 Target container port: 4000
 Ensure your app is listening on the correct port and has an active route for /video.
 
+Author 
+
+Sushma Singh
+223743838
